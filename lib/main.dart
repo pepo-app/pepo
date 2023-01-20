@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pepo/screens/auth/auth.dart';
-import 'package:pepo/screens/splash_screen.dart';
+import 'package:pepo/screens/splash.dart';
 
-import 'screens/home_screen.dart';
+import 'screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: "/splash", page: () => const SplashScreen()),
         GetPage(name: "/home", page: () => const HomeScreen()),
-        GetPage(name: "/auth", page: () => const AuthScreen()),
+        GetPage(name: "/auth", page: () => AuthScreen()),
       ],
     );
   }

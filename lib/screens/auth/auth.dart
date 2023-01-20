@@ -1,12 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class AuthScreen extends StatelessWidget {
-  const AuthScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: const Center(child: Text("Auth Screen")));
+    // Figma Flutter Generator AuthScreen - FRAME - HORIZONTAL
+    return Scaffold(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        padding: const EdgeInsets.all(16),
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+          colors: [Color(0xFFFFE3A9), Color(0xFF73CAF2)],
+          transform: GradientRotation(120.2),
+        )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset("assets/piggy_dotted.png"),
+            const SizedBox(height: 24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  height: 58,
+                  width: 124,
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Color(0xFF40DF9F))),
+                      onPressed: () {},
+                      child: Text("Sign Up")),
+                ),
+                Text("OR"),
+                SizedBox(
+                  height: 58,
+                  width: 124,
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Color(0xFF40DF9F))),
+                      onPressed: () {},
+                      child: Text("Login")),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
