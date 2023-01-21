@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AuthScreen extends StatelessWidget {
   @override
@@ -41,7 +42,7 @@ class AuthScreen extends StatelessWidget {
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
                               Color(0xFF40DF9F))),
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed("/auth/login"),
                       child: Text("Login")),
                 ),
               ],

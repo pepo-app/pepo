@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pepo/screens/auth/auth.dart';
+import 'package:pepo/screens/auth/login.dart';
 import 'package:pepo/screens/splash.dart';
 
 import 'screens/home.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/splash", page: () => const SplashScreen()),
         GetPage(name: "/home", page: () => const HomeScreen()),
         GetPage(name: "/auth", page: () => AuthScreen()),
+        GetPage(name: "/auth/login", page: () => LoginScreen())
       ],
     );
   }
