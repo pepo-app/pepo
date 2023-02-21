@@ -21,10 +21,11 @@ class MyApp extends StatelessWidget {
       initialRoute: "/splash",
       getPages: [
         GetPage(name: "/splash", page: () => const SplashScreen()),
-        GetPage(name: "/home", page: () => const HomeScreen()),
+        GetPage(name: "/home", page: () => HomeScreen()),
         GetPage(name: "/auth", page: () => AuthScreen()),
         GetPage(name: "/auth/login", page: () => LoginScreen())
       ],
+      theme: ThemeData(useMaterial3: true),
     );
   }
 }

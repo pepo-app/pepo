@@ -39,6 +39,7 @@ dependencies:
   soundpool: ^2.3.0
   flutter_secure_storage: ^8.0.0
   flutter_shapes: ^0.3.0
+  flutter_custom_cards: ^0.2.1
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,8 @@ flutter:
     - assets/yaa.gif
     - assets/piggy_front.png
     - assets/piggy_dotted.png
+    - assets/rich_piggy.png
+    - assets/nav_mask.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
