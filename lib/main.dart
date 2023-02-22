@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pepo/screens/add_piggy_bank.dart';
 import 'package:pepo/screens/auth/auth.dart';
 import 'package:pepo/screens/auth/login.dart';
 import 'package:pepo/screens/splash.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/splash", page: () => const SplashScreen()),
         GetPage(name: "/home", page: () => HomeScreen()),
         GetPage(name: "/auth", page: () => AuthScreen()),
-        GetPage(name: "/auth/login", page: () => LoginScreen())
+        GetPage(name: "/auth/login", page: () => LoginScreen()),
+        GetPage(name: "/piggy/add", page: () => AddPiggyBankScreen())
       ],
       theme: ThemeData(useMaterial3: true),
     );

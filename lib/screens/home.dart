@@ -1,58 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../components/piggy_bank.dart';
-
-class PiggyBank {
-  final int? index;
-  final IconData? iconData;
-  final String? name;
-  final int? target;
-  final int? currentlySaved;
-
-  const PiggyBank(
-      {this.index, this.iconData, this.name, this.target, this.currentlySaved});
-}
-
-class PiggyBankController extends GetxController {
-  var piggyBanks = [
-    const PiggyBank(
-        index: 1,
-        iconData: CupertinoIcons.airplane,
-        name: "iPhone",
-        target: 1000,
-        currentlySaved: 500),
-    const PiggyBank(
-        index: 2,
-        iconData: CupertinoIcons.car,
-        name: "Car",
-        target: 5000,
-        currentlySaved: 1000),
-    const PiggyBank(
-        index: 3,
-        iconData: CupertinoIcons.gift,
-        name: "Gifts",
-        target: 321,
-        currentlySaved: 404),
-    const PiggyBank(
-        index: 4,
-        iconData: CupertinoIcons.flame,
-        name: "Emergency",
-        currentlySaved: 250),
-    const PiggyBank(index: 5, iconData: CupertinoIcons.plus, name: "Add new"),
-  ].obs;
-
-  var selectedPiggyBankIndex = 1.obs;
-
-  void selectPiggyBank(int index) {
-    selectedPiggyBankIndex.value = index;
-  }
-
-  PiggyBank getCurrentPiggyBank() {
-    return piggyBanks[selectedPiggyBankIndex.value];
-  }
-}
+import '../controllers/piggy_bank_controller.dart';
+import '../models/piggy_bank.dart';
 
 class HomeScreen extends StatelessWidget {
   final controller = Get.put(PiggyBankController());
@@ -67,6 +18,15 @@ class HomeScreen extends StatelessWidget {
       } else {
         return "${piggyBank.currentlySaved} / ${piggyBank.target} \$";
       }
+    }
+
+    void onTapPiggyBank(PiggyBank piggyBank) {
+      if (piggyBank.index == 5) {
+        Get.toNamed("/piggy/add");
+        return;
+      }
+
+      controller.selectPiggyBank(piggyBank.index!);
     }
 
     return Scaffold(
@@ -98,8 +58,7 @@ class HomeScreen extends StatelessWidget {
                             name: element.name,
                             isSelected: element.index ==
                                 controller.selectedPiggyBankIndex.value,
-                            onTap: () =>
-                                controller.selectPiggyBank(element.index!),
+                            onTap: () => onTapPiggyBank(element),
                           ))
                       .toList(),
                 )),
@@ -120,7 +79,6 @@ class HomeScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.topLeft,
               children: [
-                ///***If you have exported images you must have to copy those images in assets/images directory.
                 Image(
                   image: const AssetImage("assets/nav_mask.png"),
                   height: MediaQuery.of(context).size.height * 0.3,
