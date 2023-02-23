@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                   child: IconButton(
                       iconSize: 38,
                       icon: const Icon(Icons.add),
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed("/deposit"),
                       style: IconButton.styleFrom(
                         foregroundColor: Colors.black,
                         backgroundColor: Colors.white,
