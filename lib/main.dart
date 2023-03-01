@@ -4,7 +4,9 @@ import 'package:pepo/screens/add_piggy_bank.dart';
 import 'package:pepo/screens/auth/auth.dart';
 import 'package:pepo/screens/auth/login.dart';
 import 'package:pepo/screens/deposit_screen.dart';
+import 'package:pepo/screens/settings.dart';
 import 'package:pepo/screens/splash.dart';
+import 'package:pepo/screens/withdraw.dart';
 
 import 'screens/home.dart';
 
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/auth/login", page: () => LoginScreen()),
         GetPage(name: "/piggy/add", page: () => AddPiggyBankScreen()),
         GetPage(name: "/deposit", page: () => DepositScreen()),
+        GetPage(name: "/withdraw", page: () => WithdrawScreen()),
+        GetPage(name: "/settings", page: () => SettingsScreen())
       ],
       theme: ThemeData(useMaterial3: true),
     );

@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                   child: IconButton(
                       iconSize: 38,
                       icon: const Icon(Icons.remove),
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed("/withdraw"),
                       style: IconButton.styleFrom(
                         foregroundColor: Colors.black,
                         backgroundColor: Colors.orange,
@@ -127,7 +127,7 @@ class HomeScreen extends StatelessWidget {
                   child: IconButton(
                       iconSize: 38,
                       icon: const Icon(Icons.settings),
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed("/settings"),
                       style: IconButton.styleFrom(
                         foregroundColor: Colors.black,
                         backgroundColor: Colors.green,
