@@ -31,7 +31,7 @@ class AuthScreen extends StatelessWidget {
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
                               Color(0xFF40DF9F))),
-                      onPressed: () {},
+                      onPressed: () => Get.toNamed("/auth/signup"),
                       child: Text("Sign Up")),
                 ),
                 Text("OR"),
