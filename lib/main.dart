@@ -11,6 +11,7 @@ import 'package:pepo/screens/splash.dart';
 import 'package:pepo/screens/withdraw.dart';
 
 import 'screens/home.dart';
+import 'screens/stats.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
         GetPage(name: "/withdraw", page: () => WithdrawScreen()),
         GetPage(name: "/settings", page: () => SettingsScreen()),
         GetPage(name: "/piggy/add", page: () => AddPiggyBankScreen()),
-        GetPage(name: "/piggy/list", page: () => PepoListScreen())
+        GetPage(name: "/piggy/list", page: () => PepoListScreen()),
+        GetPage(name: "/piggy/stats", page: () => PepoStatsScreen())
       ],
       theme: ThemeData(useMaterial3: true),
     );

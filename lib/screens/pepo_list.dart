@@ -275,7 +275,7 @@ class PepoListScreen extends StatelessWidget {
                   width: 60,
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.toNamed("/piggy/stats"),
                     child: Text(
                       "View Stats",
                       style: TextStyle(
